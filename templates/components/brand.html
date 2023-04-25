@@ -1,0 +1,16 @@
+{% load static %}
+
+{% block content %}
+<div class="brand-container">
+    <img src="{% static 'images/bg2.jpg' %}" class="brand-bg" />
+    <div class="brand-title-container">
+        <h1 class="brand-title">Kraftomania</h1>
+        <p class="brand-desc">"Bo życie jest zbyt krótkie, żeby pić kiepskie piwo"</p>
+    </div>
+    <div class="brand-navbar-container">
+        {% include 'components/navbar.html' %}
+    </div>
+  
+</div>
+
+{% endblock %}

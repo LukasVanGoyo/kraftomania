@@ -5,5 +5,5 @@ from .models import Brewery
 
 class HomeView(ListView):
     model = Brewery
-    template_name = 'home.html'
+    template_name = 'base.html'
     
