@@ -79,3 +79,64 @@
 .main-navbar li:hover > a {
     text-shadow: 1px 1px 5px white;
 }
+
+.top-login-box{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-login-box a{
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 20px 1px white;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    color: rgb(2, 12, 3);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    text-shadow: 1px 1px 3px wheat;
+}
+
+.big-search-box{
+    background-color: rgba(245, 245, 220,0.3);
+    position: absolute;
+    width: 100%;
+    top:250px;
+    display: flex;
+    justify-content: center;
+
+
+}
+#big-search-form{
+    width: auto;
+    justify-content: center;
+}
+
+#big-search-form input[type="text"]{
+    background-color:inherit;
+    border: none;
+    padding: 12px;
+    width: 40vw;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    text-align: center;
+}
+
+.search-btn{
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 60px;
+    border-radius: 10px;
+    font-size: large;
+    background-color: rgba(245, 245, 220,0.4);
+}
