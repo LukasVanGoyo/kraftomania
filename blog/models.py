@@ -18,17 +18,21 @@ class Article(models.Model):
     body = models.TextField()
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     added_at = models.DateTimeField(
-        default= timezone.now()
+        auto_now_add=True,
+        null = True
     )
-    likes: models.IntegerField(
+    image = models.ImageField(
+        blank=True
+    )
+    likes = models.IntegerField(
         default = 0,
         blank=True
     )
-    votes: models.IntegerField(
+    votes= models.IntegerField(
         default=0,
         blank=True
     )
-    rating: models.BigIntegerField(
+    rating= models.BigIntegerField(
         default=0,
         blank=True
     )
