@@ -8,12 +8,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}" >
+
     {% block extrahead %}{% endblock %}
     <title>Kraftomania</title>
 </head>
 <body>
-{% include 'components/navbar.html' %}
+{% include 'components/top_navbar.html' %}
+{% include 'components/brand.html' %}
+{% include 'components/main_navbar.html' %}
+{% include 'components/search_form.html' %}
 {% block content %}
 
 {% endblock %}

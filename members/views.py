@@ -89,3 +89,7 @@ def logout_user(request):
     logout(request)
     messages.success(request, "Zostałeś wylogowany")
     return redirect('/')
+
+
+def user_profile(request):
+    return render(request, 'user_profile.html')

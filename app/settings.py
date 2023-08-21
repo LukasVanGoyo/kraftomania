@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'members',
     'bootstrap5',
     'blog',
+    'fontawesomefree',
+    
 
 ]
 

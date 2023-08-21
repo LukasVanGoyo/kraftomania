@@ -1,7 +1,8 @@
-.register-headline{
-    width: 100%;
-    text-align: center;
-    padding:10px;
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+body{
+    background: rgb(188,57,8);
+    background: linear-gradient(90deg, rgba(249,178,47,1) 0%, rgba(210,159,37,1) 25%, rgba(180,138,25,1) 50%, rgba(210,159,37,1) 75%, rgba(246,170,28,1) 100%);
+  
 }
 
 .register-form-wrapper{
@@ -34,4 +35,162 @@
     display: block;
     margin-top: 40px;
     width: 60%;
+}
+
+.navbar-wrapper{
+    padding:8px;
+}
+.top-navbar .nav-item{
+    margin-right: 5px;
+}
+.top-navbar .nav-item .nav-link{
+    color:white;
+    font-weight: bold;
+    background-color:#b45f19c9;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    font-size: 20px;
+}
+.top-navbar .nav-item .nav-link:hover{
+    background-color:#ac5b19;
+}
+
+
+.top-navbar .nav-item .login-btn{
+    background-color:#b45f19c9;
+}
+
+
+
+.brand-wrapper{
+
+}
+
+.brand-title{
+    color:#44240a;
+    width: 100%;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    font-family: 'Lilita One', cursive;
+    text-shadow: 1px 1px 5px wheat;
+}
+
+
+.brand-subtitle{
+    text-align: center;
+    font-family: 'Georgia', cursive;
+    font-weight: bold;
+    color:#44240a;
+    text-shadow: 1px 1px 10px wheat;
+}
+.bg-image{
+    width: 100%;
+    height: 400px;
+    opacity: 0.8;
+}
+.main-nav-wrapper{
+    padding-top: 15px;
+}
+.main-nav .nav-item{
+    margin-right: 10px;
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 1px 5px 10px black;
+}
+
+.main-nav .nav-item:nth-child(1){
+    background-color: #62511d;
+}
+.main-nav .nav-item:nth-child(2){
+    background-color: #856d27;
+}
+.main-nav .nav-item:nth-child(3){
+    background-color: #c5a238;
+}
+.main-nav .nav-item:nth-child(4){
+    background-color: #3b3112;
+}
+.main-nav .nav-item:nth-child(5){
+    background-color: #816615;
+}
+.main-nav .nav-item .nav-link{
+    color: wheat;
+    font-size: 30px;
+    font-family: 'Lilita One', cursive;
+    text-align:center;
+    text-shadow: 4px 4px 5px black;
+    cursor: pointer;
+}
+
+.main-nav .nav-item .nav-link:hover{
+    color: antiquewhite;
+    text-shadow: 1px 1px 2px black;
+    transition: all ease-in-out 0.1s;
+    transform: scale(0.8);
+}
+
+.main-nav .nav-item:hover{
+    box-shadow: 1px 5px 10px black;
+}
+
+.search-form-wrapper{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    place-content: center;
+}
+
+.search-form{
+    width: 35%;
+    height: 45px;
+    background-color: #b45f19c9;   
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 0.1px rgba(245, 222, 179, 0.281);
+    box-shadow: 2px 2px 5px black;
+}
+
+.search-form .input-group{
+    display: flex;
+    place-content: center;
+    height: 100%;
+}
+
+.search-form .input-group .form-control{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    text-align: center;
+    color: #44240a;
+    font-family: 'Lilita One', cursive;
+    font-size: 22px;
+}
+.search-form .input-group .form-control::placeholder{
+    color: #44240a;
+    font-family: 'Lilita One', cursive;
+    font-size: 22px;
+
+}
+
+.search-form .input-group .form-control:focus-visible::placeholder{
+    color: transparent;
+    border: none;
+    outline: none;
+}
+.search-form .input-group .search-form-span{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    font-size: 24px;
+    cursor: pointer;
+    color:wheat;
+    font-weight: bolder;
+    transition: all ease-in-out .2s;
+}
+.search-form .input-group .search-form-span:hover{
+    transform: scale(1.2);
+    color: black;
 }
