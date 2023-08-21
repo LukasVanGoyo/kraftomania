@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/members/login_page.css' %}" type="text/css" />
+{% endblock %}
+{% block content %}
+
+<div class="login-form-wrapper">
+    <div class="login-form-box">
+    <h1 class="headline text-center mb-5">Logowanie</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger">{{message}}</div>
+            {% endfor %}
+            {% endif %}
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="username">
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Hasło" name="password">
+            <label for="floatingPassword">Hasło</label>
+          </div>
+
+        <input type="submit" value="Zaloguj" class='btn btn-success btn-lg login-btn mt-4'>
+    </form>
+    
+
+</div>
+</div>
+
+
+{% endblock %}
+
+
+

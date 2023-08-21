@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="register-form-wrapper">
+    <div class="register-form-box">
+    <h1 class="register-headline">Rejestracja</h1>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success">{{message}}</div>
+            {% endfor %}
+        {% endif %}
+    <form method="POST" action="" class="register-form form-floating">
+        {% csrf_token %}
+
+        {% for field in form %}
+
+            <div class="form-floating mb-3">  
+                {{ field }}
+                <label for="{{ field.field.widget.attrs.id }}"> {{field.label_tag}} </label>
+            </div>
+            
+            {% if field.errors %}
+
+                {% for error in field.errors %}
+                    <div class="alert alert-danger">{{error}}</div>
+                {% endfor %}
+
+            {% endif %}
+
+        {% endfor %}
+
+        <input type="submit"  class="btn btn-success btn-lg" value="Zarejestruj się" />
+        
+    </form>
+    </div>
+</div>
+{% endblock %}

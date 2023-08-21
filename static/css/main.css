@@ -1,0 +1,37 @@
+.register-headline{
+    width: 100%;
+    text-align: center;
+    padding:10px;
+}
+
+.register-form-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+  
+}
+.register-form-box{
+    width: 50%;
+    box-shadow: 2px 2px 20px black;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.register-form{
+    width: 80%;
+    margin: auto;
+}
+
+.register-btn{
+    float: right;
+}
+
+.register-span{
+    display: block;
+    margin-top: 40px;
+    width: 60%;
+}
