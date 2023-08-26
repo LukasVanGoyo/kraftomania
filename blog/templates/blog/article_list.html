@@ -1,18 +1,43 @@
+{% extends 'base.html' %}
 {% load static %}
 
+{% block content %}
+<div class="article-list-wrapper">
 {% for article in object_list %}
-<div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{{article.image.url}}" class="img rounded-start" alt="..." >
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{  article.title }}</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="article-card">
+        <div class="article-card-image-box">
+            <img class="article-card-image" src="{{article.image.url}}">
+            <div class="article-card-caption">
+                <i class="fa-regular fa-heart"></i>
+            </div>
         </div>
-      </div>
+          
+        <div class="article-card-body">
+            <h1 class="article-card-title">{{article.title}}</h1>
+            <p class="article-card-desc">{{ article.short_desc }}</p>
+        </div>
+       
+        <div class="article-card-footer">
+
+            <div class="article-card-top-footer">
+                <div class="article-card-info"> 
+                    <small class=""><span><i class="fa-regular fa-user"></i></span>{{article.user.username}}</small>
+                    <small class=""><span><i class="fa-regular fa-calendar"></i></span>{{article.added_at|date:"d.  m.  Y"}}</small>
+                </div>
+                <a href={% url 'article_detail' article.slug %} class="btn article-card-button">Czytaj</a>
+            </div>
+
+            <div class="article-card-tags">
+                <p class="article-card-tag">#piwo</p>
+                <p class="article-card-tag">#piwo_kraftowe</p>
+                <p class="article-card-tag">#alkohole</p>
+                <p class="article-card-tag">#milk_shake</p>
+            </div>
+            
+        </div>
     </div>
-  </div>
+
 {% endfor %}
+
+</div>
+{% endblock %}

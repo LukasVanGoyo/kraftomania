@@ -17,10 +17,20 @@
     <title>Kraftomania</title>
 </head>
 <body>
+
 {% include 'components/top_navbar.html' %}
 {% include 'components/brand.html' %}
-{% include 'components/main_navbar.html' %}
-{% include 'components/search_form.html' %}
+
+{% if not '/article/' in request.path %}
+    {% include 'components/main_navbar.html' %}
+    {% include 'components/search_form.html' %}
+
+{% endif %}
+
+
+
+
+
 {% block content %}
 
 {% endblock %}

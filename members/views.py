@@ -12,6 +12,8 @@ from django.core.mail import EmailMessage
 from . tokens import account_activation_token
 
 def home(request):
+
+   
     return render(request, 'base.html')
 
 
@@ -32,6 +34,12 @@ def activate(request, uid64, token):
         messages.error(request, 'Link aktywacyjny jest nieprawidłowy')
 
     return redirect('/')
+
+
+
+
+
+
 
 
 def activateEmail(request, user, to_email):

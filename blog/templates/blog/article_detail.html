@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="article-wrapper">
+    <div class="article-image-wrapper">
+        <img class="article-image" src="{{article.image.url}}">
+        <div class="article-caption">
+            <h5 class="article-date">{{ article.added_at| date:"d - m - Y"}}</h5>
+            <h1 class="article-title">{{ article.title }}</h1>
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}
+
+
