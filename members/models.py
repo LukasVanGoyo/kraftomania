@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser, User
+from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db.models.signals import post_save
 
 
@@ -23,12 +23,13 @@ class CustomUser(AbstractUser):
     )
 
     is_active = models.BooleanField(
-        default=False,
+        default=True,
     )
 
-    
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
+
+    objects = BaseUserManager()
 
     def __str__(self):
         return self.username
@@ -36,10 +37,9 @@ class CustomUser(AbstractUser):
 
 
 class UserProfile(models.Model):
-
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to="images", default="blankuser.png")
     
-
     def __str__(self):
         return self.user.username
     
